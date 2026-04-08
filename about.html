@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BlueStoneProps – About & Contact</title>
+<meta name="description" content="Affordable residential, commercial and agricultural plots in Trichy, Hyderabad and Bangalore. RERA approved, gated community, best investment options.">
+
+<meta name="keywords" content="plots in Trichy, Hyderabad plots, Bangalore land, residential plots India, DTCP approved plots, low budget plots">
+
+<meta name="author" content="BlueStone Props">
+
+<!-- Open Graph (for WhatsApp & social sharing) -->
+<meta property="og:title" content="BlueStone Props - Premium Plots">
+<meta property="og:description" content="Find the best residential & commercial plots at affordable prices.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Downloads/accord1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #f7f4ef; --black: #0f0f0d; --brown: #8b6f47;
+    --brown-light: #c4a882; --gray: #6b6b68; --gray-light: #e8e4dd; --white: #ffffff;
+  }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 5vw;
+    background: rgba(247,244,239,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--black); text-decoration: none; }
+  .nav-logo span { color: var(--brown); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: .85rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--brown); }
+  .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: .5rem 1.3rem; border-radius: 2px; }
+  .nav-cta:hover { background: var(--brown) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--black); }
+
+  /* PAGE HERO */
+  .page-hero {
+    padding: 130px 5vw 5rem;
+    background: var(--black); text-align: center;
+  }
+  .page-hero-label { font-size: .75rem; letter-spacing: .2em; text-transform: uppercase; color: var(--brown-light); margin-bottom: 1rem; }
+  .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 300; color: var(--white); }
+  .page-hero h1 em { font-style: italic; color: var(--brown-light); }
+  .page-hero p { color: rgba(255,255,255,.6); margin-top: 1rem; font-size: .95rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+  /* ABOUT */
+  .about-section {
+    padding: 6rem 5vw;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    background: var(--white);
+  }
+  .about-imgs { position: relative; }
+  .about-img-main { border-radius: 4px; overflow: hidden; aspect-ratio: 3/4; }
+  .about-img-main img { width: 100%; height: 100%; object-fit: cover; }
+  .about-img-accent {
+    position: absolute; bottom: -2rem; right: -2rem;
+    width: 55%; aspect-ratio: 1; border-radius: 4px; overflow: hidden;
+    border: 6px solid var(--white);
+  }
+  .about-img-accent img { width: 100%; height: 100%; object-fit: cover; }
+  .section-label { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown); margin-bottom: 1rem; display: flex; align-items: center; gap: .8rem; }
+  .section-label::before { content: ''; display: block; width: 28px; height: 1px; background: var(--brown); }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.2; }
+  .section-title em { font-style: italic; color: var(--brown); }
+  .about-text p { color: var(--gray); line-height: 1.9; margin: 1.2rem 0; }
+
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  .skill-item { display: flex; align-items: center; gap: .7rem; padding: .8rem 1rem; background: var(--cream); border-radius: 4px; }
+  .skill-dot { width: 8px; height: 8px; background: var(--brown); border-radius: 50%; flex-shrink: 0; }
+  .skill-text { font-size: .83rem; font-weight: 500; }
+
+  .about-cta { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--black); color: var(--white); padding: .85rem 2rem; border-radius: 2px; font-size: .85rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: background .25s; }
+  .btn-primary:hover { background: var(--brown); }
+  .btn-outline { border: 1px solid var(--black); color: var(--black); padding: .85rem 2rem; border-radius: 2px; font-size: .85rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; transition: .25s; }
+  .btn-outline:hover { background: var(--black); color: var(--white); }
+
+  /* ACHIEVEMENTS */
+  .achievements { padding: 4rem 5vw; background: var(--cream); display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .ach-card { background: var(--white); padding: 1.8rem; border-radius: 4px; text-align: center; border-top: 3px solid var(--brown); }
+  .ach-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--brown); }
+  .ach-label { font-size: .8rem; color: var(--gray); margin-top: .3rem; }
+
+  /* TESTIMONIALS */
+  .testi-section { padding: 6rem 5vw; background: var(--black); }
+  .testi-header { text-align: center; max-width: 520px; margin: 0 auto 3rem; }
+  .testi-header .section-label { justify-content: center; color: var(--brown-light); }
+  .testi-header .section-label::before { background: var(--brown-light); }
+  .testi-header .section-title { color: var(--white); }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .testi-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 6px; padding: 2rem; }
+  .stars { color: var(--brown-light); font-size: .9rem; margin-bottom: .8rem; letter-spacing: .1em; }
+  .testi-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.75; color: rgba(255,255,255,.82); margin-bottom: 1.5rem; }
+  .testi-quote::before { content: '\201C'; font-size: 3rem; color: var(--brown); line-height: 0; vertical-align: -1rem; margin-right: .2rem; }
+  .testi-author { display: flex; align-items: center; gap: .8rem; }
+  .testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--brown); display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: var(--white); flex-shrink: 0; }
+  .testi-name { font-weight: 500; font-size: .9rem; color: var(--white); }
+  .testi-role { font-size: .75rem; color: rgba(255,255,255,.4); margin-top: .1rem; }
+
+  /* CONTACT FORM */
+  #contact {
+    padding: 6rem 5vw;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    background: var(--cream);
+  }
+  .contact-info-text { padding-top: 1rem; }
+  .contact-info-text .section-title { margin-bottom: 1.2rem; }
+  .contact-info-text p { color: var(--gray); line-height: 1.9; margin-bottom: 2rem; }
+  .contact-details { display: flex; flex-direction: column; gap: 1.2rem; }
+  .cd-item { display: flex; align-items: flex-start; gap: 1rem; }
+  .cd-icon { width: 42px; height: 42px; background: var(--brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
+  .cd-label { font-size: .72rem; color: var(--gray); text-transform: uppercase; letter-spacing: .08em; }
+  .cd-val { font-weight: 500; margin-top: .15rem; }
+
+  .social-links { display: flex; gap: 1rem; margin-top: 2rem; }
+  .social-btn {
+    width: 42px; height: 42px; background: var(--black); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 1rem; transition: background .2s;
+  }
+  .social-btn:hover { background: var(--brown); }
+
+  .contact-form { background: var(--white); padding: 2.5rem; border-radius: 6px; box-shadow: 0 4px 32px rgba(0,0,0,.07); }
+  .form-title { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 600; margin-bottom: 1.5rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: 1rem; }
+  .form-group label { font-size: .75rem; letter-spacing: .06em; color: var(--gray); text-transform: uppercase; }
+  .form-group input, .form-group select, .form-group textarea {
+    border: 1px solid var(--gray-light); border-radius: 2px;
+    padding: .8rem 1rem; font-family: 'DM Sans', sans-serif; font-size: .9rem;
+    background: var(--cream); color: var(--black); transition: border .2s; outline: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--brown); }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .form-submit {
+    width: 100%; background: var(--black); color: var(--white);
+    padding: 1rem; border: none; border-radius: 2px; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; font-size: .85rem; font-weight: 500;
+    letter-spacing: .1em; text-transform: uppercase; transition: background .25s; margin-top: .5rem;
+  }
+  .form-submit:hover { background: var(--brown); }
+  .form-note { font-size: .75rem; color: var(--gray); text-align: center; margin-top: .8rem; }
+
+  footer { background: var(--black); color: rgba(255,255,255,.45); padding: 2rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); font-weight: 700; }
+  .footer-logo span { color: var(--brown); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: rgba(255,255,255,.45); text-decoration: none; font-size: .8rem; transition: color .2s; }
+  .footer-links a:hover { color: var(--brown-light); }
+  footer p { font-size: .78rem; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    .about-section, #contact { grid-template-columns: 1fr; gap: 3rem; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .achievements { grid-template-columns: repeat(2, 1fr); }
+    .contact-quick { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: var(--cream); padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gray-light); z-index: 99; }
+    .about-img-accent { right: 0; }
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+  .social-btn img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}.social-btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+  .custom-select {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.options {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #f7f4ef;
+  border: 1px solid #d6cfc2;
+  border-radius: 12px;
+  margin-top: 8px;
+  z-index: 100;
+  box-shadow: 0 8px 20px rgba(0,0,0,0,8);
+}
+.options div:hover {
+  background: #f5f5f5;
+}
+.options div {
+  padding: 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-bottom:1 px solid #e5e0d8;
+}
+.options div:last-child {
+  border-bottom: none;
+}
+
+.options div:hover {
+  background: #f5f5f5;
+} 
+.select-box::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+}
+.select-box {
+  width: 100%;
+  display: block;
+  padding: 14px 40px 14px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f7f4ef;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">BlueStone<span>Props</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="plots.html">Plots</a></li>
+    <li><a href="about.html" class="active">About & Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Book Visit</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-label">About & Contact</div>
+  <h1>Meet Your <em>Property</em> Expert</h1>
+  <p>Dedicated to finding you the perfect plot — with transparency, trust and expertise.</p>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-imgs reveal">
+    <div class="about-img-main">
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="Property specialist"/>
+    </div>
+    <div class="about-img-accent">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Land view"/>
+    </div>
+  </div>
+  <div class="about-text reveal">
+    <div class="section-label">About Me</div>
+    <h2 class="section-title">Your Trusted <em>Digital</em><br>Property Marketer</h2>
+    <p>Hi, I'm Karthick — a passionate digital marketing professional specialising in premium land and plot promotions. I work directly with a leading property development company to bring you the best verified plots across India's fastest-growing corridors.</p>
+    <p>With over a years of experience in real estate marketing, I understand both the buyer's needs and the investment landscape. My mission is simple: to help you invest smartly, safely and confidently.</p>
+    <p>Every plot I promote is personally vetted — legally clear, RERA-compliant and in a high-appreciation location. I don't just sell land; I help you build your future.</p>
+    <div class="skills-grid">
+      <div class="skill-item"><div class="skill-dot"></div><div class="skill-text">Digital Marketing</div></div>
+      <div class="skill-item"><div class="skill-dot"></div><div class="skill-text">Property Consulting</div></div>
+      <div class="skill-item"><div class="skill-dot"></div><div class="skill-text">Legal Documentation</div></div>
+      <div class="skill-item"><div class="skill-dot"></div><div class="skill-text">Site Visit Planning</div></div>
+      <div class="skill-item"><div class="skill-dot"></div><div class="skill-text">EMI & Finance Help</div></div>
+    </div>
+    <div class="about-cta">
+      <a href="plots.html" class="btn-primary">View Plots</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<div class="achievements">
+  <div class="ach-card reveal">
+    <div class="ach-num">20000+</div>
+    <div class="ach-label">sq.fts Sold</div>
+  </div>
+  <div class="ach-card reveal">
+    <div class="ach-num">250+</div>
+    <div class="ach-label">Happy Clients</div>
+  </div>
+  <div class="ach-card reveal">
+    <div class="ach-num">8+</div>
+    <div class="ach-label">Prime Locations</div>
+  </div>
+  <div class="ach-card reveal">
+    <div class="ach-num">2</div>
+    <div class="ach-label">Years Experience</div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section class="testi-section">
+  <div class="testi-header reveal">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-title">What My <em>Clients</em> Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote">The process was smooth and completely transparent. I found my dream plot within a week and the documentation was handled brilliantly.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div><div class="testi-name">Ramesh Iyer</div><div class="testi-role">Investor, Bangalore</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote">Exceptional service. Showed me only the most relevant plots for my budget and the site visit was perfectly arranged. Highly recommend!</div>
+      <div class="testi-author">
+        <div class="testi-avatar">P</div>
+        <div><div class="testi-name">Priya Sharma</div><div class="testi-role">First-time Buyer, Hyderabad</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote">Professional, knowledgeable and trustworthy. My plot value has already appreciated 20% in 18 months. Brilliant investment guidance!</div>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div><div class="testi-name">Arjun Nair</div><div class="testi-role">NRI Investor, Dubai</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote">As an NRI it was hard to trust anyone for land purchase remotely. This team made it seamless with video tours and regular updates throughout.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">S</div>
+        <div><div class="testi-name">Sunita Reddy</div><div class="testi-role">NRI Buyer, USA</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote">Bought two plots for my retirement plan. The return on investment has been outstanding. More than what was promised. Very honest team.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">V</div>
+        <div><div class="testi-name">Venkat Rao</div><div class="testi-role">Retired Investor, Chennai</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="stars">★★★★★</div>
+      <div class="testi-quote">Clear communication, no pressure tactics and genuinely put my interests first. Found the perfect plot for my farmhouse project. Highly recommended!</div>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div><div class="testi-name">Meena Krishnan</div><div class="testi-role">Farmhouse Buyer, Pune</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact">
+  <div class="contact-info-text reveal">
+    <div class="section-label">Contact Me</div>
+    <h2 class="section-title">Let's Find Your <em>Perfect</em> Plot Together</h2>
+    <p>Have a question about a listing, want to book a site visit or need investment advice? Fill in the form or reach out directly. I respond within 24 hours.</p>
+    <div class="contact-details">
+      <div class="cd-item">
+        <div class="cd-icon">📞</div>
+        <div><div class="cd-label">Phone</div><div class="cd-val">+91 8825508271 , +91 6385580787</div></div>
+      </div>
+      <div class="cd-item">
+        <div class="cd-icon">✉️</div>
+        <div><div class="cd-label">Email</div><div class="cd-val">hello@bluestoneprops.com</div></div>
+      </div>
+      <div class="cd-item">
+        <div class="cd-icon">📍</div>
+        <div><div class="cd-label">Office</div><div class="cd-val">G–corner,Canara bank,1st floor,TVS tollgate, Trichy–620020</div></div>
+      </div>
+      <div class="cd-item">
+        <div class="cd-icon">💬</div>
+        <div><div class="cd-label">WhatsApp</div><div class="cd-val">+91 8825508271</div></div>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://instagram.com/bluestone_props" class="social-btn" target="_blank">
+   <img src="Downloads/Instagram.jpg">
+</a>
+
+<a href="https://facebook.com/BluestoneProps" class="social-btn" target="_blank">
+   <img src="Downloads/Facebook.jpg">
+</a>
+ 
+<a href="https://youtube.com/@im.inertboy" class="social-btn" target="_blank">
+   <img src="Downloads/Youtube.jpg">
+</a>
+
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/karthi-sagaa-158509388?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-btn" target="_blank">
+  <img src="Downloads/Linkedin .jpg">
+</a>
+    </div>
+  </div>
+
+  <div class="contact-form reveal">
+    <div class="form-title">Book a Free Consultation</div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>First Name</label>
+       <input id="fname" type="text" placeholder="Blue" />
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input id="lname" type="text" placeholder="stone" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+     <input id="email" type="email" placeholder="hello@bluestoneprops.com" />
+    </div>
+    <div class="form-group">
+      <label>Phone / WhatsApp</label>
+     <input id="phone" type="tel" placeholder="+91 9876543210" />
+    </div>
+    <div class="form-group">
+      <label>Interested In</label>
+      <div class="custom-select">
+  <div class="select-box">Residential Plot</div>
+  <div class="options">
+    <div data-value="Residential Plot">Residential Plot</div>
+    <div data-value="Commercial Plot">Commercial Plot</div>
+    <div data-value="Agricultural Land">Agricultural Land</div>
+    <div data-value="Investment Advisory">Investment Advisory</div>
+    <div data-value="Other">Other</div>
+  </div>
+</div>
+    </div>
+    <div class="form-group">
+      <label>Budget Range</label>
+      <div class="custom-select">
+  <div class="select-box" onclick="toggleDropdown(this)">
+    Under ₹4L Lakhs
+  </div>
+
+  <div class="options">
+    <div onclick="selectOption(this)">Under ₹4Lakhs</div>
+    <div onclick="selectOption(this)">₹4L – ₹7L</div>
+    <div onclick="selectOption(this)">₹7L – ₹10L</div>
+    <div onclick="selectOption(this)">₹10L – ₹12L</div>
+    <div onclick="selectOption(this)">Above ₹12L</div>
+  </div>
+</div>
+    </div>
+    <div class="form-group">
+      <label>Your Message</label>
+     <textarea id="message" placeholder="Tell me your requirements..."></textarea>
+    </div><button type="button" class="form-submit" onclick="handleSubmit()">  Send enquiry →</button>
+      </div>
+</section>
+
+<footer>
+  <div class="footer-logo">BlueStone<span>Props</span> Properties</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="plots.html">Plots</a>
+    <a href="about.html">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>© 2026 BlueStone Props. All rights reserved.</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+  document.getElementById('hamburger').onclick = () => document.getElementById('navLinks').classList.toggle('open');
+
+  function handleSubmit() {
+    alert("Thank you! Your enquiry has been submitted. I'll get back to you within 24 hours.");
+  }
+  
+</script>
+<script>
+function handleSubmit() {
+
+  // Get values
+  let name = document.getElementById("fname").value;
+  let lastname = document.getElementById("lname").value;
+  let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
+  let message = document.getElementById("message").value;
+
+  let interest = document.querySelectorAll('.custom-select')[0]
+                    .querySelector('.select-box').innerText;
+
+  let budget = document.querySelectorAll('.custom-select')[1]
+                    .querySelector('.select-box').innerText;
+
+  // Create message
+  let finalMessage =
+`Hello, I'm interested in your properties.
+
+Name: ${name} ${lastname}
+Email: ${email}
+Phone: ${phone}
+Interest: ${interest}
+Budget: ${budget}
+Message: ${message}`;
+
+  let encodedMessage = encodeURIComponent(finalMessage);
+
+  let phoneNumber = "918825508271"; // your number
+  
+let url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+window.open(url, "_blank");
+}
+</script>
+</body>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const selects = document.querySelectorAll(".custom-select");
+
+  selects.forEach(select => {
+    const box = select.querySelector(".select-box");
+    const options = select.querySelector(".options");
+
+    if (!box || !options) return;
+
+    // Toggle dropdown
+    box.addEventListener("click", function () {
+      options.style.display =
+        options.style.display === "block" ? "none" : "block";
+    });
+
+    // Select option
+    options.querySelectorAll("div").forEach(option => {
+      option.addEventListener("click", function () {
+        box.innerText = this.innerText;
+        options.style.display = "none";
+      });
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", function (e) {
+    selects.forEach(select => {
+      if (!select.contains(e.target)) {
+        const options = select.querySelector(".options");
+        if (options) options.style.display = "none";
+      }
+    });
+  });
+
+});
+</script>
+</html>

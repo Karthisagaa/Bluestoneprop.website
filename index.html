@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BlueStoneProps – Home</title>
+<meta name="description" content="Affordable residential, commercial and agricultural plots in Trichy, Hyderabad and Bangalore. RERA approved, gated community, best investment options.">
+
+<meta name="keywords" content="plots in Trichy, Hyderabad plots, Bangalore land, residential plots India, DTCP approved plots, low budget plots">
+
+<meta name="author" content="BlueStone Props">
+
+<!-- Open Graph (for WhatsApp & social sharing) -->
+<meta property="og:title" content="BlueStone Props - Premium Plots">
+<meta property="og:description" content="Find the best residential & commercial plots at affordable prices.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="Downloads/accord1.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --cream: #f7f4ef;
+    --black: #0f0f0d;
+    --brown: #8b6f47;
+    --brown-light: #c4a882;
+    --gray: #6b6b68;
+    --gray-light: #e8e4dd;
+    --white: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.4rem 5vw;
+    background: rgba(247,244,239,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--black); text-decoration: none; }
+  .nav-logo span { color: var(--brown); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { font-size: .85rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--gray); text-decoration: none; transition: color .2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--brown); }
+  .nav-cta { background: var(--black) !important; color: var(--white) !important; padding: .5rem 1.3rem; border-radius: 2px; }
+  .nav-cta:hover { background: var(--brown) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--black); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 100px 5vw 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80') center/cover no-repeat;
+  }
+  .hero-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(15,15,13,.82) 45%, rgba(15,15,13,.3));
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 620px; animation: fadeUp .9s ease both; }
+  .hero-eyebrow {
+    font-size: .78rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--brown-light); margin-bottom: 1.2rem;
+    display: flex; align-items: center; gap: .8rem;
+  }
+  .hero-eyebrow::before { content: ''; display: block; width: 36px; height: 1px; background: var(--brown-light); }
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.1;
+    color: var(--white); margin-bottom: 1.5rem;
+  }
+  .hero-title em { font-style: italic; color: var(--brown-light); }
+  .hero-desc { font-size: 1rem; color: rgba(255,255,255,.7); line-height: 1.9; margin-bottom: 2.5rem; max-width: 460px; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--brown); color: var(--white); padding: .9rem 2.2rem; border-radius: 2px; font-size: .85rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .25s; }
+  .btn-primary:hover { background: var(--brown-light); }
+  .btn-outline { border: 1px solid rgba(255,255,255,.4); color: var(--white); padding: .9rem 2.2rem; border-radius: 2px; font-size: .85rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: .25s; }
+  .btn-outline:hover { background: rgba(255,255,255,.1); }
+
+  /* STATS BAR */
+  .stats-bar {
+    background: var(--white); padding: 2.5rem 5vw;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  .stat-item { text-align: center; padding: 1rem; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 700; color: var(--brown); }
+  .stat-label { font-size: .8rem; color: var(--gray); margin-top: .3rem; letter-spacing: .05em; }
+
+  /* WHY US */
+  .why { padding: 6rem 5vw; background: var(--cream); }
+  .why-header { text-align: center; max-width: 560px; margin: 0 auto 3.5rem; }
+  .section-label { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: var(--brown); margin-bottom: 1rem; display: flex; align-items: center; gap: .8rem; justify-content: center; }
+  .section-label::before, .section-label::after { content: ''; flex: 1; max-width: 36px; height: 1px; background: var(--brown); }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; line-height: 1.2; }
+  .section-title em { font-style: italic; color: var(--brown); }
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .why-card { background: var(--white); padding: 2.2rem; border-radius: 4px; border-bottom: 3px solid transparent; transition: border-color .3s, transform .3s; }
+  .why-card:hover { border-color: var(--brown); transform: translateY(-4px); }
+  .why-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .why-title { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; margin-bottom: .6rem; }
+  .why-desc { font-size: .88rem; color: var(--gray); line-height: 1.8; }
+
+  /* EXPLORE CTA */
+  .explore-cta {
+    background: var(--black); padding: 6rem 5vw;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 2rem; flex-wrap: wrap;
+  }
+  .explore-cta h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; color: var(--white); max-width: 500px; }
+  .explore-cta h2 em { font-style: italic; color: var(--brown-light); }
+  .btn-gold { background: var(--brown); color: var(--white); padding: 1rem 2.5rem; border-radius: 2px; font-size: .9rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; transition: background .25s; white-space: nowrap; }
+  .btn-gold:hover { background: var(--brown-light); }
+
+  /* FOOTER */
+  footer { background: var(--black); color: rgba(255,255,255,.45); padding: 2rem 5vw; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); font-weight: 700; }
+  .footer-logo span { color: var(--brown); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { color: rgba(255,255,255,.45); text-decoration: none; font-size: .8rem; transition: color .2s; }
+  .footer-links a:hover { color: var(--brown-light); }
+  footer p { font-size: .78rem; }
+
+  /* REVEAL */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+
+  @media (max-width: 900px) {
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .nav-links.open { display: flex; flex-direction: column; position: fixed; top: 72px; left: 0; right: 0; background: var(--cream); padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gray-light); z-index: 99; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">BlueStone<span>Props</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="plots.html">Plots</a></li>
+    <li><a href="about.html">About & Contact</a></li>
+    <li><a href="about.html#contact" class="nav-cta">Book Visit</a></li>
+  </ul>
+  <div class="hamburger" onclick="this.nextElementSibling||document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Premium Land Investment</div>
+    <h1 class="hero-title">Discover Your<br><em>Dream Plot</em><br>of Land</h1>
+    <p class="hero-desc">Verified, RERA-approved plots in the most sought-after growth corridors. Expert guidance from first inquiry to final registration.</p>
+    <div class="hero-btns">
+      <a href="plots.html" class="btn-primary">Explore Our Plots →</a>
+      <a href="about.html#contact" class="btn-outline">Book Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <div class="stat-num">120+</div>
+    <div class="stat-label">Plots Sold</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">8+</div>
+    <div class="stat-label">Prime Locations</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">95%</div>
+    <div class="stat-label">Client Satisfaction</div>
+  </div>
+  <div class="stat-item reveal">
+    <div class="stat-num">5★</div>
+    <div class="stat-label">Average Rating</div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="why-header reveal">
+    <div class="section-label">Why Choose Us</div>
+    <h2 class="section-title">Invest With <em>Confidence</em></h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card reveal">
+      <div class="why-icon">✅</div>
+      <div class="why-title">Legally Verified</div>
+      <div class="why-desc">Every plot is RERA approved, title-clear and legally verified before listing. Zero risk for buyers.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">📍</div>
+      <div class="why-title">Prime Locations</div>
+      <div class="why-desc">Carefully selected high-growth corridors with excellent connectivity, infrastructure and appreciation potential.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🤝</div>
+      <div class="why-title">End-to-End Support</div>
+      <div class="why-desc">From site visit to registration — we handle everything. No hidden charges, no surprises.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">💰</div>
+      <div class="why-title">Best Price Guarantee</div>
+      <div class="why-desc">Direct from developer pricing with flexible payment plans and EMI options to suit every budget.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">📈</div>
+      <div class="why-title">High ROI Potential</div>
+      <div class="why-desc">Our plots have shown consistent 15–25% annual appreciation. Smart land investment for the future.</div>
+    </div>
+    <div class="why-card reveal">
+      <div class="why-icon">🏆</div>
+      <div class="why-title">Trusted Since 2024</div>
+      <div class="why-desc">Over a years of experience helping 250+ families and investors find their perfect land.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE CTA -->
+<div class="explore-cta reveal">
+  <h2>Ready to Find Your <em>Perfect Plot?</em></h2>
+  <a href="plots.html" class="btn-gold">Browse All Plots →</a>
+</div>
+
+<footer>
+  <div class="footer-logo">BlueStone<span>Props</span> </div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="plots.html">Plots</a>
+    <a href="about.html">About</a>
+    <a href="about.html#contact">Contact</a>
+  </div>
+  <p>© 2026 BlueStone Props. All rights reserved.</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => x.isIntersecting && x.target.classList.add('visible')), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+  document.querySelector('.hamburger').onclick = () => document.getElementById('navLinks').classList.toggle('open');
+</script>
+</body>
+</html>
